@@ -1,0 +1,5 @@
+<%= form_for @play do |f| %>
+<%=f.collection_select :artist_id, Artist.all, :id, :name %><br><br>
+<%=f.collection_select :instrument_id, Instrument.all, :id, :name %><br><br>
+<%=f.submit'create connection'%>
+<% end %>
